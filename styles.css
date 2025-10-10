@@ -21,8 +21,9 @@
     --color-text: #1A1A1A;
     --color-text-light: #666666;
         /* Typography - Ultra Premium */
-    --font-display: 'Cormorant Garamond', serif;
-    --font-body: 'Raleway', sans-serif;    
+    --font-display: 'Playfair Display', serif; /* Títulos - Similar a Pesta Tahun Baru */
+    --font-body: 'Inter', sans-serif; /* Parágrafos - Similar a Jack Input */
+    --font-script: 'Dancing Script', cursive; /* Textos pequenos - Similar a Aston Script */    
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -894,4 +895,30 @@ strong {
     .guarantee-badges {
         grid-template-columns: 1fr;
     }
+}
+
+/* === CUSTOM FONT APPLICATIONS === */
+/* Aplicar fonte script em textos pequenos e detalhes */
+.hero-subtitle,
+.section-subtitle,
+small,
+.footer-text,
+.testimonial-author,
+.benefit-description,
+.price-detail {
+    font-family: var(--font-script);
+    font-weight: 400;
+}
+
+/* Garantir que parágrafos usem Inter */
+p, .hero-intro p, .lead-text {
+    font-family: var(--font-body);
+}
+
+/* Garantir que títulos usem Playfair Display */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.section-title,
+.benefit-title {
+    font-family: var(--font-display);
 }
