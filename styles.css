@@ -922,3 +922,77 @@ h1, h2, h3, h4, h5, h6,
 .benefit-title {
     font-family: var(--font-display);
 }
+
+/* === HIGHLIGHT STYLES - Destaques Visuais === */
+
+/* Preços ruins (caros) - Vermelho */
+.price-bad {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+    border: 2px solid #b91c1c;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+/* Preços bons (baratos) - Verde */
+.price-good {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    border: 2px solid #14532d;
+    animation: pulse-green 2s infinite;
+}
+
+/* Palavras negativas - Destaque vermelho suave */
+.highlight-bad {
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* Palavras positivas - Destaque verde suave */
+.highlight-good {
+    background: rgba(22, 163, 74, 0.15);
+    color: #16a34a;
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+/* Animação de pulso para preço bom */
+@keyframes pulse-green {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(22, 163, 74, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+    .price-bad, .price-good {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.95em;
+    }
+    
+    .highlight-bad, .highlight-good {
+        padding: 0.1rem 0.4rem;
+        font-size: 0.95em;
+    }
+}
